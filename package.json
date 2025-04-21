@@ -6,9 +6,19 @@
   "engines": {
     "vscode": "^1.99.0"
   },
+  "publisher": "Tarun Aanand S G",
   "categories": [
-    "Other"
+    "Other",
+    "Programming Languages",
+    "Debuggers"
   ],
+  "keywords": [
+        "debug",
+        "print",
+        "logging",
+        "development",
+        "productivity"
+    ],
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
@@ -20,9 +30,10 @@
     ],
     "keybindings": [
       {
-          "command": "debug-print.insertDebugprint",
-          "key": "ctrl+shift+d",
-          "when": "editor.hasSelection && editorTextFocus"
+        "command": "debug-print.insertDebugprint",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d",
+        "when": "editor.hasSelection && editorTextFocus"
       }
     ]
   },
@@ -52,5 +63,9 @@
     "typescript": "^5.8.2",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TarunAanand/debugPrintHelper.git"
   }
 }

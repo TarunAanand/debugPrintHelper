@@ -5,9 +5,6 @@ export function activate(context: vscode.ExtensionContext) {
 
 	console.log('extension "debug-print" is now active!');
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
 	const disposable = vscode.commands.registerCommand('debug-print.insertDebugprint', () => {
 		const editor = vscode.window.activeTextEditor;
 		if (!editor) {
@@ -21,7 +18,8 @@ export function activate(context: vscode.ExtensionContext) {
 			return;
 		}
 
-		const formatted_txt = `print("${text} => ", ${text})`;
+		const languageId = editor.document.languageId;
+		const formatted_txt = getFormattedText(languageId, text);
 		const lineAfterSelection = selection.end.line;
 
 		editor.edit(editBuilder => {
@@ -38,6 +36,53 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(disposable);
+
+	function getFormattedText(languageId: string, text: string) {
+		switch (languageId) {
+			case 'python':
+				return `print("${text} => ", ${text})`;
+				case 'javascript':
+					case 'typescript':
+					case 'jsx':
+					case 'tsx':
+						return `console.log("${text} =>", ${text});`;
+					
+					case 'java':
+						return `System.out.println("${text} => " + ${text});`;
+					
+					case 'c':
+					case 'cpp':
+						return `printf("${text} => %d\\n", ${text});`;
+					
+					case 'csharp':
+						return `Console.WriteLine("${text} => {0}", ${text});`;
+						
+					case 'go':
+						return `fmt.Printf("${text} => %v\\n", ${text})`;
+						
+					case 'php':
+						return `echo "${text} => " . ${text};`;
+						
+					case 'ruby':
+						return `puts "${text} => #{${text}}"`;
+						
+					case 'rust':
+						return `println!("${text} => {:?}", ${text});`;
+						
+					case 'swift':
+						return `print("${text} => \\(${text})")`;
+						
+					case 'powershell':
+						return `Write-Host "${text} => " $${text}`;
+						
+					case 'shellscript':
+					case 'bash':
+						return `echo "${text} => $${text}"`;
+						
+					default:
+						return `console.log("${text} =>", ${text});`;
+		}
+	}
 }
 
 
