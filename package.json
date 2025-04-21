@@ -1,12 +1,12 @@
 {
-  "name": "debug-print",
-  "displayName": "debug-print",
+  "name": "debug-print-tarun",
+  "displayName": "Debug-print",
   "description": "automatic macro to format print selected variable for debugging",
-  "version": "0.0.1",
+  "version": "0.2.2",
   "engines": {
     "vscode": "^1.99.0"
   },
-  "publisher": "Tarun Aanand S G",
+  "publisher": "TarunAanandSG",
   "categories": [
     "Other",
     "Programming Languages",
