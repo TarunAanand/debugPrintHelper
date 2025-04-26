@@ -4,7 +4,7 @@ A VS Code extension that helps you add language-specific debug print statements 
 
 ## Features
 
-This extension adds a keyboard shortcut (Ctrl+Shift+D) that inserts a debug print statement below your selected variable or expression, automatically adapting to the programming language you're using.
+This extension adds a keyboard shortcut (`Ctrl+Shift+D` or `Cmd+Shift+D` on Mac) that inserts a debug print statement below your selected variable or expression, automatically adapting to the programming language you're using.
 
 ### How it works:
 
@@ -28,14 +28,22 @@ This extension adds a keyboard shortcut (Ctrl+Shift+D) that inserts a debug prin
 - Shell/Bash: `echo "variable => $variable"`
 - And more...
 
+## Customizing the Keyboard Shortcut
+
+The default shortcut for this extension is `Ctrl+Shift+D` (or `Cmd+Shift+D` on Mac). If you want to change it to a different shortcut:
+
+1. Open VS Code
+2. Go to File > Preferences > Keyboard Shortcuts (or press `Ctrl+K Ctrl+S`)
+3. Search for "Add Debug Print Statement"
+4. Click on the pencil icon to the left of the command
+5. Press your desired key combination
+6. Press Enter to save
+
+![Customizing the Shortcut](images/custom-shortcut.gif)
 
 ## Requirements
 
 No special requirements or dependencies.
-
-## Extension Settings
-
-This extension doesn't have any configurable settings yet.
 
 ## Known Issues
 
