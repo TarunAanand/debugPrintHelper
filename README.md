@@ -12,7 +12,7 @@ This extension adds a keyboard shortcut (`Ctrl+Shift+D` or `Cmd+Shift+D` on Mac)
 2. Press `Ctrl+Shift+D` (or `Cmd+Shift+D` on Mac)
 3. A language-appropriate print statement is automatically inserted on the next line
 
-### Supported Languages:
+### Supported Languages:~
 
 - Python: `print("variable => ", variable)`
 - JavaScript/TypeScript: `console.log("variable =>", variable);`
@@ -39,7 +39,7 @@ The default shortcut for this extension is `Ctrl+Shift+D` (or `Cmd+Shift+D` on M
 5. Press your desired key combination
 6. Press Enter to save
 
-![Customizing the Shortcut](images/custom-shortcut.gif)
+![Sample Demonsatration in Python](src\resources\demo.gif)
 
 ## Requirements
 
