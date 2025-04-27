@@ -39,8 +39,7 @@ The default shortcut for this extension is `Ctrl+Shift+D` (or `Cmd+Shift+D` on M
 5. Press your desired key combination
 6. Press Enter to save
 
-![Sample Demonsatration in Python](images\demo.gif)
-
+![Sample Demonsatration in Python](https://github.com/TarunAanand/debugPrintHelper/blob/master/images/demo.gif)
 
 
 ## Requirements
